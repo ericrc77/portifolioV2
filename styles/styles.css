@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    /* height: 100vh; */
+    background-color: #000;
+    color: #f6f6f6 ;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cabecalho{
+    padding: 2% 0 0 15% ;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px
+}
+
+.cabecalho__menu__link{
+color: #22D4FD;
+font-family: "Montserrat", sans-serif;
+font-size: 24px;
+font-weight: 600;
+text-decoration: none
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+}
+.foto{
+    width: 300px;
+    height: 300px;
+}
+.apresentacao__conteudo{
+    width: 615px;
+    height: 482px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.apresentacao__conteudo__titulo{
+font-size: 36px;
+font-family: 'Krona One', sans-serif;
+width: 593px;
+
+}
+
+.apresentacao__conteudo__titulo__destaque{
+    color: #22D4FD;
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo{
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.apresentacao__links__link{
+    display: flex;
+    justify-content:center;
+    gap: 16px;
+    border: 2px solid #22D4FD;
+    border-color: #22D4FD;
+    border-radius: 8px;
+    width: 378px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 16px 0;
+    font-weight: 600;
+}
+.apresentacao__links__link:hover {
+    background-color: #272727;
+    padding-top: 17px;
+}
+
+
+.rodape{
+    background-color: #22D4FD; /* Defina uma cor de fundo diferente para o footer */
+    font-family: 'Montserrat', sans-serif;
+    color: #000; /* Defina a cor do texto do footer para que seja visível */
+    text-align: center;
+    padding: 7px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 50px ;
+    
+}
+*{
+    zoom: 0.99;
+}
+.apresentacao__conteudo__nome{
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+.apresentacao__conteudo__texto__curriculo{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+.apresentacao__conteudo__texto__curriculo__links{
+    text-decoration: none;
+    color: #22D4FD;
+}
+.apresentacao__conteudo__texto__curriculo__links:hover{
+    color: #ff343e;
+}
+.apresentacao__about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0%;
+    flex-direction: column;
+    width: 1200px;
+    padding-bottom: 30px;
+}
+.apresentacao__conteudo__titulo__hablidades{
+    font-size: 20px;
+    font-family: 'Krona One', sans-serif;
+    width: 593px;
+}
+.apresentacao__conteudo__texto__agradecimento{
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    width:1000px;
+    }
