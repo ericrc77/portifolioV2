@@ -1,3 +1,9 @@
+/* Foto menor apenas na página Sobre Mim */
+.apresentacao__about .home__foto {
+    width: 108px !important;
+    height: 108px !important;
+    margin-bottom: 12px !important;
+}
 /* === RESPONSIVIDADE GERAL === */
 @media (max-width: 900px) {
     .home__apresentacao,
