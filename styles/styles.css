@@ -1,3 +1,11 @@
+/* Partículas animadas de fundo */
+.particle {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.3s;
+    will-change: transform;
+}
 /* Foto menor apenas na página Sobre Mim */
 .apresentacao__about .home__foto {
     width: 108px !important;

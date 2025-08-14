@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // === Animações e interações específicas para mobile ===
     function isMobile() {
-        return window.innerWidth <= 700 || /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
     }
 
     if (isMobile()) {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             p.style.top = Math.random() * 100 + 'vh';
             p.style.left = Math.random() * 100 + 'vw';
             p.style.width = p.style.height = (Math.random() * 8 + 4) + 'px';
-            p.style.background = colors[Math.floor(Math.random()* decolors.length)];
+            p.style.background = colors[Math.floor(Math.random() * colors.length)];
             p.style.opacity = 0.18 + Math.random() * 0.22;
             p.style.borderRadius = '50%';
             p.style.pointerEvents = 'none';
