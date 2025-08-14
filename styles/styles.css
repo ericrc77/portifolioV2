@@ -1,4 +1,16 @@
 /* Partículas animadas de fundo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .particle {
     position: fixed;
     z-index: 0;
@@ -13,6 +25,24 @@
     margin-bottom: 12px !important;
 }
 /* === RESPONSIVIDADE GERAL === */
+@media (max-width: 900px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
+    .rodape {
+        flex-shrink: 0;
+    }
+}
 @media (max-width: 900px) {
     .home__apresentacao,
     .curriculo__container,
@@ -553,6 +583,7 @@ body {
     font-size: 1rem;
     margin-top: auto;
     letter-spacing: 0.04em;
+    flex-shrink: 0;
 }
 
 @media (max-width: 900px) {
