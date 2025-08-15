@@ -14,44 +14,103 @@
             <a class="cabecalho__menu__link" href="about.html" aria-current="page">Sobre mim</a>
         </nav>
     </header>
-    <main class="apresentacao__about">
-    <!-- Se desejar exibir a foto de perfil nesta página, descomente abaixo: -->
-    <img src="assets/perfil..jpeg" alt="Foto de perfil de Eric Campos com expressão séria" class="home__foto">
-        <section class="about__section">
-            <h1 class="about__titulo">Sobre mim</h1>
-            <p class="about__texto">
-                Sou <strong>Eric Rodrigues Campos</strong>, desenvolvedor <b>Full-Stack</b> com especialidade em <b>PHP</b> e apaixonado por tecnologia, inovação e design. Minha missão é transformar ideias em experiências digitais de alto impacto, unindo criatividade, código limpo e foco em resultados.
+    <main class="about__container">
+        <div class="about__hero">
+            <div class="about__intro">
+                <img src="assets/perfil..jpeg" alt="Foto de perfil de Eric Campos" class="about__foto">
+                <div class="about__apresentacao">
+                    <h1 class="about__nome">Eric Rodrigues Campos</h1>
+                    <p class="about__cargo">Desenvolvedor Full-Stack | Especialista em PHP</p>
+                    <p class="about__resumo">
+                        Apaixonado por tecnologia e inovação, transformo ideias em experiências digitais de alto impacto. 
+                        Estudante de Engenharia de Software com foco em soluções web modernas e código limpo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about__content">
+            <section class="about__historia">
+                <h2 class="about__titulo-secao">💫 Minha História</h2>
+                <p class="about__paragrafo">
+                    Sou <strong>Eric Rodrigues Campos</strong>, desenvolvedor <b>Full-Stack</b> com especialidade em <b>PHP</b> e apaixonado por tecnologia, inovação e design. Minha missão é transformar ideias em experiências digitais de alto impacto, unindo criatividade, código limpo e foco em resultados.
+                </p>
+                <p class="about__paragrafo">
+                    Atualmente, curso <strong>Engenharia de Software</strong> (6º período) na Universidade Católica do Leste de Minas. Meu portfólio reflete minha busca constante por evolução, aprendizado e excelência.
+                </p>
+            </section>
+
+            <section class="about__skills">
+                <h2 class="about__titulo-secao">🚀 Habilidades & Tecnologias</h2>
+                <div class="skills__grid">
+                    <div class="skill__card">
+                        <h3>💻 Backend</h3>
+                        <p><strong>PHP</strong> (especialidade), Java, APIs, Bancos de dados</p>
+                    </div>
+                    <div class="skill__card">
+                        <h3>🎨 Frontend</h3>
+                        <p><strong>HTML5, CSS3, JavaScript</strong> (ES6+), React</p>
+                    </div>
+                    <div class="skill__card">
+                        <h3>🛠️ Ferramentas</h3>
+                        <p><strong>Git & GitHub</strong>, Node.js, Design Responsivo</p>
+                    </div>
+                    <div class="skill__card">
+                        <h3>✨ Design</h3>
+                        <p><strong>Mobile First</strong>, Flexbox, Grid, Acessibilidade, SEO</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about__visao">
+                <h2 class="about__titulo-secao">🎯 Visão & Objetivos</h2>
+                <div class="visao__content">
+                    <p class="about__paragrafo">
+                        Busco oportunidades para colaborar em projetos inovadores, ampliar meu networking e contribuir para soluções que gerem valor real para pessoas e empresas. Estou sempre aberto a novos desafios e parcerias.
+                    </p>
+                    <div class="objetivos__lista">
+                        <div class="objetivo__item">💡 Criar soluções web inovadoras</div>
+                        <div class="objetivo__item">🤝 Colaborar em projetos desafiadores</div>
+                        <div class="objetivo__item">📈 Contribuir para o crescimento de empresas</div>
+                        <div class="objetivo__item">🌱 Aprendizado contínuo em novas tecnologias</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about__contato">
+                <h2 class="about__titulo-secao">📱 Vamos Conversar?</h2>
+                <div class="contato__content">
+                    <p class="about__paragrafo">
+                        Estou disponível para networking, parcerias e projetos colaborativos. Vamos criar algo incrível juntos!
+                    </p>
+                    <div class="contato__info">
+                        <div class="contato__item">
+                            <span class="contato__icon">📧</span>
+                            <div>
+                                <strong>E-mail</strong><br>
+                                <a href="mailto:ericcamposop@gmail.com" class="about__email">ericcamposop@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contato__item">
+                            <span class="contato__icon">🌐</span>
+                            <div>
+                                <strong>Redes Sociais</strong><br>
+                                GitHub, Instagram e WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="about__footer">
+            <p class="about__agradecimento">
+                Agradeço sua visita ao meu portfólio! Espero que possamos colaborar em projetos incríveis.
+                <br><br>
+                <strong>Eric Rodrigues Campos</strong><br>
+                <em>Desenvolvedor Full-Stack</em>
             </p>
-            <p class="about__texto">
-                Atualmente, curso <strong>Engenharia de Software</strong> (6º período) na Universidade Católica do Leste de Minas. Meu portfólio reflete minha busca constante por evolução, aprendizado e excelência.
-            </p>
-        </section>
-        <section class="about__section">
-            <h2 class="about__subtitulo">Habilidades Técnicas</h2>
-            <ul class="about__lista">
-                <li><strong>Especialidade:</strong> PHP (web dinâmico, APIs, integração com bancos de dados)</li>
-                <li><strong>Linguagens:</strong> HTML5, CSS3, JavaScript (ES6+), Java</li>
-                <li><strong>Frameworks:</strong> React, Node.js</li>
-                <li><strong>Versionamento:</strong> Git & GitHub</li>
-                <li><strong>Design Responsivo:</strong> Mobile First, Flexbox, Grid</li>
-                <li><strong>Boas Práticas:</strong> Acessibilidade, SEO, código limpo</li>
-            </ul>
-        </section>
-        <section class="about__section">
-            <h2 class="about__subtitulo">Visão de Futuro</h2>
-            <p class="about__texto">
-                Busco oportunidades para colaborar em projetos inovadores, ampliar meu networking e contribuir para soluções que gerem valor real para pessoas e empresas. Estou sempre aberto a novos desafios e parcerias.
-            </p>
-        </section>
-        <section class="about__section">
-            <h2 class="about__subtitulo">Contato</h2>
-            <p class="about__texto">
-                Vamos conversar? Estou disponível para networking, parcerias e projetos. Entre em contato pelo e-mail <a href="mailto:ericcamposop@gmail.com">ericcamposop@gmail.com</a> ou pelas redes sociais.
-            </p>
-        </section>
-        <section>
-            <p class="about__agradecimento">Obrigado por visitar meu portfólio!<br>Atenciosamente,<br><strong>Eric Rodrigues Campos</strong></p>
-        </section>
+        </footer>
     </main>
     <script src="scripts.js"></script>
 </body>
