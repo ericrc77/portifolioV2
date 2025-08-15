@@ -523,7 +523,7 @@ body {
     gap: 40px;
 }
 
-.about__historia, .about__skills, .about__visao, .about__contato {
+.about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato {
     background: rgba(24, 28, 42, 0.97);
     border-radius: 16px;
     padding: 32px;
@@ -577,6 +577,78 @@ body {
 .skill__card p {
     color: #e0e0e0;
     line-height: 1.5;
+}
+
+/* Competências Técnicas */
+.competencias__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.competencia__item {
+    background: rgba(35, 41, 70, 0.6);
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #F6F6F6;
+    color: #e0e0e0;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.competencia__item:hover {
+    background: rgba(35, 41, 70, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(246, 246, 246, 0.1);
+}
+
+.competencia__item strong {
+    color: #22D4FD;
+    font-weight: 600;
+}
+
+/* Certificações */
+.certificacoes__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.certificacao__item {
+    background: rgba(35, 41, 70, 0.6);
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 4px solid #22D4FD;
+    color: #e0e0e0;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.certificacao__item:hover {
+    background: rgba(35, 41, 70, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(34, 212, 253, 0.15);
+}
+
+.certificacao__item strong {
+    color: #F6F6F6;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.certificacao__item a {
+    color: #22D4FD;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.certificacao__item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .visao__content {
@@ -687,13 +759,28 @@ body {
         font-size: 2rem;
     }
     
-    .about__hero, .about__historia, .about__skills, .about__visao, .about__contato, .about__footer {
+    .about__hero, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato, .about__footer {
         padding: 24px 20px;
         margin: 0 10px;
     }
     
     .skills__grid {
         grid-template-columns: 1fr;
+    }
+    
+    .competencias__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .certificacoes__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .competencia__item, .certificacao__item {
+        padding: 16px;
+        font-size: 0.9rem;
     }
     
     .objetivos__lista {
@@ -704,6 +791,36 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Media query para dispositivos muito pequenos */
+@media (max-width: 480px) {
+    .about__hero, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato, .about__footer {
+        padding: 20px 15px;
+        margin: 0 5px;
+    }
+    
+    .about__nome {
+        font-size: 1.8rem;
+    }
+    
+    .about__titulo-secao {
+        font-size: 1.4rem;
+    }
+    
+    .competencia__item, .certificacao__item {
+        padding: 14px;
+        font-size: 0.85rem;
+    }
+    
+    .skill__card {
+        padding: 16px;
+    }
+    
+    .skill__card h3 {
+        font-size: 1rem;
+    }
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
