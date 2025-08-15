@@ -24,7 +24,10 @@
     <main id="principal" class="about__container">
         <div class="about__hero">
             <div class="about__intro">
-                <img src="assets/perfil.jpeg" alt="Foto de perfil de Eric Campos" class="about__foto" width="180" height="180" loading="lazy">
+             <img src="assets/perfil.jpeg" 
+                 srcset="assets/perfil.jpeg 1x, assets/perfil.jpeg 2x" 
+                 alt="Foto de perfil de Eric Campos" class="about__foto" width="180" height="180" loading="lazy"
+                 onerror="this.onerror=null;this.src='perfil.jpeg'; if(!this.complete||this.naturalWidth===0){ this.src='./assets/perfil.jpeg'; }">
                 <div class="about__apresentacao">
                     <h1 class="about__nome">Eric Rodrigues Campos</h1>
                     <p class="about__cargo">Desenvolvedor Full-Stack | Especialista em PHP</p>

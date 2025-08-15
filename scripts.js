@@ -231,5 +231,25 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = src;
     });
 
+    // Verificação de fallback para foto de perfil caso não carregue no mobile
+    function ensureProfilePhoto() {
+        document.querySelectorAll('.home__foto, .about__foto, .curriculo__foto').forEach(img => {
+            if (!img.complete || img.naturalWidth === 0) {
+                const candidates = [
+                    'assets/perfil.jpeg',
+                    './assets/perfil.jpeg',
+                    '/assets/perfil.jpeg',
+                    'perfil.jpeg'
+                ];
+                for (const c of candidates) {
+                    img.src = c;
+                    if (img.complete && img.naturalWidth > 0) break;
+                }
+            }
+        });
+    }
+    setTimeout(ensureProfilePhoto, 500);
+    window.addEventListener('load', ensureProfilePhoto);
+
     console.log('🚀 Portfólio Eric Campos carregado com sucesso!');
 });

@@ -116,7 +116,10 @@
             </section>
             
             <figure class="curriculo__foto-container">
-                <img src="assets/perfil.jpeg" alt="Foto de perfil profissional de Eric Campos" class="curriculo__foto" width="150" height="150" loading="lazy">
+             <img src="assets/perfil.jpeg" 
+                 srcset="assets/perfil.jpeg 1x, assets/perfil.jpeg 2x" 
+                 alt="Foto de perfil profissional de Eric Campos" class="curriculo__foto" width="150" height="150" loading="lazy"
+                 onerror="this.onerror=null;this.src='perfil.jpeg'; if(!this.complete||this.naturalWidth===0){ this.src='./assets/perfil.jpeg'; }">
                 <figcaption class="visually-hidden">Foto profissional de Eric Campos</figcaption>
             </figure>
         </div>

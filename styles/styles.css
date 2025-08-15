@@ -633,7 +633,7 @@ main {
         font-size: 1.8rem;
     }
     
-    .about__hero, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato, .about__footer {
+    .about__hero, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato {
         padding: 24px 20px;
         margin: 0 10px;
     }

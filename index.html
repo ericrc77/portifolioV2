@@ -48,7 +48,11 @@
                     Olá! Sou <strong>Eric Campos</strong>, desenvolvedor Full-Stack especializado em <b>HTML, CSS, JavaScript, PHP e Java</b>. Transformo ideias em experiências digitais modernas, responsivas e acessíveis. Vamos criar algo revolucionário juntos?
                 </p>
             </div>
-                        <img src="assets/perfil.jpeg" alt="Foto de perfil de Eric Campos com expressão séria" class="home__foto" width="180" height="180" fetchpriority="high">
+                      <img src="assets/perfil.jpeg" 
+                          srcset="assets/perfil.jpeg 1x, assets/perfil.jpeg 2x" 
+                          alt="Foto de perfil de Eric Campos com expressão séria" 
+                          class="home__foto" width="180" height="180" fetchpriority="high"
+                          onerror="this.onerror=null;this.src='perfil.jpeg'; if(!this.complete||this.naturalWidth===0){ this.src='./assets/perfil.jpeg'; }">
         </section>
 
         <section class="home__redes">
