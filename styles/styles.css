@@ -17,6 +17,11 @@
 }
 
 /* Acessibilidade */
+.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}
 .skip-link {
     position: absolute;
     left: -999px;
@@ -208,6 +213,12 @@ main {
     aspect-ratio: 1 / 1;
 }
 
+/* Unificação estilos de foto de perfil */
+.home__foto, .about__foto, .curriculo__foto {
+    display: block;
+    background: #0f141f;
+}
+
 .home__redes {
     background: var(--bg-card);
     border-radius: 16px;
@@ -305,6 +316,30 @@ main {
     box-shadow: 0 4px 24px 0 rgba(34, 212, 253, 0.15);
     transition: var(--transicao);
     aspect-ratio: 1 / 1;
+}
+
+/* Currículo foto (base) */
+.curriculo__foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--cor-terciaria);
+    box-shadow: 0 4px 24px 0 rgba(34, 212, 253, 0.15);
+    transition: var(--transicao);
+    aspect-ratio: 1 / 1;
+}
+
+/* Foco visível acessível */
+:focus-visible {
+    outline: 3px solid var(--cor-terciaria);
+    outline-offset: 4px;
+}
+
+/* Preferência de contraste (exemplo simples) */
+@media (prefers-contrast: more) {
+    body { text-shadow: none; }
+    .cabecalho__menu__link[aria-current="page"]::after { box-shadow: none; }
 }
 
 .about__nome {

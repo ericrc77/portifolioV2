@@ -64,25 +64,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function animateParticle(particle) {
-        const speed = 0.3 + Math.random() * 0.4;
+        const speed = 0.15 + Math.random() * 0.25;
         const dx = (Math.random() - 0.5) * speed;
         const dy = (Math.random() - 0.5) * speed;
-        
-        setInterval(() => {
-            let top = parseFloat(particle.style.top);
-            let left = parseFloat(particle.style.left);
-            
+        let top = parseFloat(particle.style.top);
+        let left = parseFloat(particle.style.left);
+        function step() {
             top += dy;
             left += dx;
-            
             if (top > 100) top = -5;
             if (top < -5) top = 100;
             if (left > 100) left = -5;
             if (left < -5) left = 100;
-            
-            particle.style.top = `${top}vh`;
-            particle.style.left = `${left}vw`;
-        }, 50);
+            particle.style.transform = `translate(${left}vw, ${top}vh)`;
+            requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
     }
 
     // === HOVER EFFECTS ===
@@ -201,10 +198,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // === INICIALIZAÇÃO ===
     
-    // Performance: só criar partículas se não for dispositivo muito limitado
-    if (!navigator.userAgent.includes('Android 4') && !navigator.connection?.effectiveType?.includes('2g')) {
+    // Performance: só criar partículas se não for dispositivo muito limitado ou se usuário não prefere reduzir movimento
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduceMotion && !navigator.connection?.effectiveType?.includes('2g')) {
         createParticles();
+    } else if (reduceMotion) {
+        document.documentElement.classList.add('reduce-motion');
     }
+
+    // Toggle manual de partículas (acessibilidade/performance)
+    const toggleBtn = document.createElement('button');
+    toggleBtn.textContent = 'Alternar efeitos';
+    toggleBtn.setAttribute('aria-pressed', 'true');
+    toggleBtn.style.cssText = 'position:fixed;bottom:16px;right:16px;background:#181c2a;color:#22D4FD;border:1px solid #22D4FD;padding:8px 14px;border-radius:8px;font-family:inherit;cursor:pointer;font-size:0.8rem;z-index:500;box-shadow:0 4px 12px rgba(0,0,0,0.4);';
+    toggleBtn.addEventListener('click', () => {
+        const active = toggleBtn.getAttribute('aria-pressed') === 'true';
+        toggleBtn.setAttribute('aria-pressed', String(!active));
+        if (active) {
+            document.querySelectorAll('.particle').forEach(p => p.remove());
+            toggleBtn.textContent = 'Ativar efeitos';
+        } else {
+            createParticles();
+            toggleBtn.textContent = 'Desativar efeitos';
+        }
+    });
+    document.body.appendChild(toggleBtn);
 
     // Preload de imagens críticas
     const criticalImages = ['assets/perfil.jpeg', 'assets/github.png', 'assets/whatsapp.jpg', 'assets/instagram.png'];
