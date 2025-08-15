@@ -171,6 +171,7 @@ main {
     border: 4px solid var(--cor-terciaria);
     box-shadow: 0 4px 24px 0 rgba(34, 212, 253, 0.15);
     transition: var(--transicao);
+    aspect-ratio: 1 / 1;
 }
 
 .home__redes {
@@ -269,6 +270,7 @@ main {
     object-fit: cover;
     box-shadow: 0 4px 24px 0 rgba(34, 212, 253, 0.15);
     transition: var(--transicao);
+    aspect-ratio: 1 / 1;
 }
 
 .about__nome {
@@ -601,73 +603,43 @@ main {
 }
 
 @media (max-width: 480px) {
-    .home__container, .about__container {
-        padding: 0 10px;
-        margin: 20px auto;
+    .home__container, .about__container { padding: 0 10px; margin: 20px auto; }
+    .home__apresentacao, .about__hero { padding: 24px 16px; }
+    .home__titulo, .about__nome { font-size: 1.6rem; }
+    .home__texto, .about__resumo { font-size: 1rem; }
+    /* Tornar a foto fluida, mantendo círculo */
+    .home__foto, .about__foto { 
+        width: min(120px, 40vw);
+        height: min(120px, 40vw);
+        max-width: 100%;
+        display: block;
     }
-    
-    .home__apresentacao, .about__hero {
-        padding: 24px 16px;
-    @media (max-width: 900px) {
-        .curriculo__header { padding: 32px 28px; }
-        .curriculo__titulo { font-size: 1.9rem; }
-        .curriculo__contato, .curriculo__objetivo, .curriculo__secao { padding: 24px 22px; }
-        .curriculo__foto { width: 150px; height: 150px; }
-    }
+    .home__redes, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato { padding: 20px 16px; }
+    .home__redes__titulo, .about__titulo-secao { font-size: 1.4rem; }
+    .home__links__link { padding: 14px 16px; font-size: 0.9rem; }
+    .competencia__item, .certificacao__item { padding: 14px; font-size: 0.85rem; }
+    .skill__card { padding: 16px; }
+    .skill__card h3 { font-size: 1rem; }
+}
 
-    @media (max-width: 600px) {
-        .curriculo__container { padding: 0 16px 32px; margin: 30px auto; }
-        .curriculo__titulo { font-size: 1.7rem; }
-        .curriculo__titulo-secao { font-size: 1.3rem; }
-        .curriculo__item, .skill__categoria, .certificado__item { font-size: 0.95rem; }
-    }
-
-    @media (max-width: 480px) {
-        .curriculo__header { padding: 24px 18px; }
-        .curriculo__contato, .curriculo__objetivo, .curriculo__secao { padding: 20px 16px; }
-        .curriculo__titulo { font-size: 1.55rem; }
-        .curriculo__subtitulo { font-size: 0.95rem; }
-        .curriculo__titulo-secao { font-size: 1.15rem; }
-        .curriculo__foto { width: 130px; height: 130px; }
-    }
-    }
-    
-    .home__titulo, .about__nome {
-        font-size: 1.6rem;
-    }
-    
-    .home__texto, .about__resumo {
-        font-size: 1rem;
-    }
-    
-    .home__foto, .about__foto {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .home__redes, .about__historia, .about__skills, .about__competencias, .about__certificacoes, .about__visao, .about__contato {
-        padding: 20px 16px;
-    }
-    
-    .home__redes__titulo, .about__titulo-secao {
-        font-size: 1.4rem;
-    }
-    
-    .home__links__link {
-        padding: 14px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .competencia__item, .certificacao__item {
-        padding: 14px;
-        font-size: 0.85rem;
-    }
-    
-    .skill__card {
-        padding: 16px;
-    }
-    
-    .skill__card h3 {
-        font-size: 1rem;
-    }
+/* Media queries específicas do currículo (separadas para evitar aninhamento incorreto) */
+@media (max-width: 900px) {
+    .curriculo__header { padding: 32px 28px; }
+    .curriculo__titulo { font-size: 1.9rem; }
+    .curriculo__contato, .curriculo__objetivo, .curriculo__secao { padding: 24px 22px; }
+    .curriculo__foto { width: 150px; height: 150px; display:block; }
+}
+@media (max-width: 600px) {
+    .curriculo__container { padding: 0 16px 32px; margin: 30px auto; }
+    .curriculo__titulo { font-size: 1.7rem; }
+    .curriculo__titulo-secao { font-size: 1.3rem; }
+    .curriculo__item, .skill__categoria, .certificado__item { font-size: 0.95rem; }
+}
+@media (max-width: 480px) {
+    .curriculo__header { padding: 24px 18px; }
+    .curriculo__contato, .curriculo__objetivo, .curriculo__secao { padding: 20px 16px; }
+    .curriculo__titulo { font-size: 1.55rem; }
+    .curriculo__subtitulo { font-size: 0.95rem; }
+    .curriculo__titulo-secao { font-size: 1.15rem; }
+    .curriculo__foto { width: 130px; height: 130px; }
 }
